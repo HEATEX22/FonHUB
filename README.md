@@ -7,4 +7,4 @@ Prosta i responsywna strona internetowa serwisu telefonów FonHUB. Projekt skła
 - Nowoczesny, responsywny design
 
 ## Autor
-Strona została wykonana przez **Mikołaja Kanarkiewicza** jako projekt w ramach praktyk zawodowych — **maj 2025**.
+Strona została stworzona przez **Mikołaja Kanarkiewicza** w ramach praktyk zawodowych — **Maj 2025**.
