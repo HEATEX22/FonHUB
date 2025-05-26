@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!--HTML 5-->
+<html lang="pl"> <!--Jezyk strony-->
+<head>
+    <meta charset="UTF-8"> <!--Polskie znaki-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Skalowanie-->
+    <title>MobilFix - Serwis Telefonów</title> <!--Tytul-->
+    <link rel="shortcut icon" href="img/fonhub.ico" type="image/x-icon"> <!--LOGO-->
+    <link rel="stylesheet" href="style.css"> <!--CSS-->
+
+    <script>
+        function service(title) {
+            const title2 = document.getElementById("title"); 
+            const form = document.getElementById("form"); 
+            const about = document.getElementById("about"); 
+            const about_text = document.getElementById("about_text"); 
+            
+            title2.value = title;
+            form.style.display = "block";
+            about.style.display = "none";
+            about_text.textContent = "📝Formularz";
+            about_text.href = "#form";
+        }
+    </script>
+</head>
+<body>
+    <div class="nav"> <!--Zakladki-->
+        <ul>
+            <li><a href="index.html">🏠Strona główna</a></li>
+            <li><a id="about_text" href="#about">📜O nas</a></li>
+            <li><a href="#services">🛠️Usługi</a></li>
+            <li><a href="#contact">📞Kontakt</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="logo"> <!--LOGO i powitanie-->
+            <img src="img/banner.png" alt="banner">
+            <p>Witamy na stronie głównej serwisu <b>FonHUB</b>. Na tej stronie znajdziesz listę dostępnych usług oraz możliwość kontaktu z nami!</p>
+        </div>
+
+        <div id="about"> <!--O nas-->
+            <h1>📜 - O nas!</h1> 
+            <p id="description"> <!--O nas opis (Przykladowy)-->
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div id="form" style="display: none;"> <!--Zakladka formularza-->
+            <h1>📝 - Uzupełnij formularz!</h1>
+            <form method="post"> <!--Formularz-->
+                <input required type="text" id="title" placeholder="Tytuł"><br>
+                <input required type="email" id="email" placeholder="Wprowadż e-mail"><br>
+                <textarea required id="reason" placeholder="Opisz problem"></textarea><br>
+                <button id="submit" type="submit">Wyślij zgłoszenie!</button>
+            </form>
+        </div>
+        <div id="services"> <!--Usługi-->
+            <h1>🛠️ - Nasze usługi!</h1>
+            <div class="services_grid"> <!--Wybór serwisu-->
+                <button onclick="service('Wymiana ekranu')">
+                    <h2>📱 - Wymiana ekranu</h2>
+                    <p>Naprawiamy pęknięte i uszkodzone wyświetlacze.</p>
+                </button>
+                
+
+                <button onclick="service('Naprawa po zalaniu')">
+                    <h2>💧 - Naprawa po zalaniu</h2>
+                    <p>Przywracamy urządzenia po kontakcie z wodą.</p>
+                </button>
+
+                <button onclick="service('Wymiana baterii')">
+                    <h2>🔋 - Wymiana baterii</h2>
+                    <p>Wymieniamy zużyte baterie na nowe i wydajne.</p>
+                </button>
+
+
+                <button onclick="service('Odzyskiwanie danych')">
+                    <h2>💾 - Odzyskiwanie danych</h2>
+                    <p>Ratujemy dane z uszkodzonych telefonów.</p>
+                </button>
+
+            </div>
+        </div>
+        <div id="contact"> <!--Kontakt-->
+            <h1>📞 - Kontakt z nami!</h1>
+            <p id="description">
+                <a href="tel:+48793723232">Tel. +48 793 723 232</a><br>
+                <a href="mailto:fonhub.intro@gmail.com">fonhub.intro@gmail.com</a>
+            </p>    
+
+        </div>
+    </main>
+
+    <footer> <!--Stopka-->
+        <p>&copy; 2025 MobilFix – Wszelkie prawa zastrzeżone</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+/* Nawigacja */
+.nav {
+    position: fixed;
+    background-color: #9b6a0e;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 0px 8px 0px rgba(200, 200, 200, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    display: inline-block;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0 12px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent; 
+}
+
+
+.nav li:hover {
+    border-bottom: 2px solid #ffa600;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* Zakładki */
+main {
+    padding-top:  80px;
+}
+
+
+main > div {
+    text-align: left;
+    margin: auto;
+    height: auto;
+    width: auto;
+    max-width: 1600px;
+    min-height: auto;
+    
+    padding-bottom:  20px ;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(200, 200, 200, 1);
+    margin-bottom: 50px;
+}
+
+/* Tytuł zakładki */
+main > div h1 {
+    text-align: left;
+    display: inline-block;
+    border-bottom: 2px solid #ffa600;
+    margin: 25px 30px;
+
+}
+
+/* Opis */
+#description {
+    color: rgb(105, 105, 105);
+    margin: 0px 30px;
+    word-spacing:5px;
+    text-align: left;
+    font-size: 17px;
+
+}
+
+/* LOGO */
+.logo,.logo p ,.logo img {
+    text-align: center;
+    color: black;
+
+}
+
+.logo p {
+    margin: 15px 30px;
+    padding: 40px 0 0 0;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+
+/* Usługi */
+
+
+.services_grid {
+    text-align: center;
+}
+
+
+.services_grid button {
+    width: auto;
+    height: auto;
+    min-width: 370px;
+    min-height: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffa600;
+    color: white;
+    margin: 10px 10px;
+    cursor: pointer;
+
+}
+
+
+.services_grid button:hover {
+    background-color: #ff8c00;
+    box-shadow: 0px 0px 12px 0px #ff8c00;
+}
+.services_grid button h2{
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+.services_grid button p {
+    color: whitesmoke;
+    text-align: left;
+    margin-left: 25px;
+
+}
+
+#contact a {
+    color: #ffa600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+footer {
+    clear: both;
+    background-color: #ffa600;
+    padding: 30px;
+    color: white;
+}
+
+
+
+/* Formularz */
+
+form {
+    text-align: center;
+}
+#title, #email, #reason, #submit {
+    width: 95%;
+    padding: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10PX;
+    border: none;
+
+    
+}
+
+#title, #email, #reason {
+    border: 1px solid #b9b9b9;
+}
+
+#reason {
+    height: 70px;
+}
+#submit {
+    background-color: #ffa600;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #ff8c00;
+    box-shadow: 0px 0px 12px 0px #ff8c00;
+}
+
+
+
+
+
+/* Skalowanie telefon */
+@media (max-width: 1600px) {
+    .services_grid {
+        flex-direction: column;
+    }
+
+    .services_grid button {
+        min-height: 100px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav li {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav li {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+}
